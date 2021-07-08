@@ -18,3 +18,8 @@ function chec() {
         document.getElementById("submit").disabled = true;
     }
 }
+let body = document.querySelector('body');
+let sun = document.querySelector(".sun");
+sun.onclick = () => {
+    body.classList.toggle("dark")
+}

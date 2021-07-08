@@ -6,18 +6,24 @@
     font-family: 'Bona Nova', serif;
 }
 body{
-    background:-webkit-linear-gradient(left,  #039103 11%,#b4ddb4 51%,#b4ddb4 51%,#039103 95%);
     text-transform: capitalize;
 }
 header{  
 display:flex;
+width: 100%;
+position:sticky;
 justify-content: center;
-position: sticky;
-box-shadow: 0px 10px 8px rgb(56, 68, 56) ;
+background-image: linear-gradient(rgb(15, 199, 231),rgb(45, 174, 190));
+box-shadow:0px 5px 3px rgb(56, 68, 56)  ;
+}
+.dark header{
+    background:rgba(22, 18, 18) ;
+    border-bottom: 3px solid #fff;
 }
 header img{
     width:250px;
     padding: 5px;
+    position:sticky;
 }
 svg{
     margin-left:5px;
@@ -25,12 +31,14 @@ svg{
 section img{
     width:100%;
     align-self: center;
+    position: sticky;
 }
 section{
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    position: sticky;
 
 }
 
@@ -70,11 +78,13 @@ input{
     letter-spacing: 1px;
     margin: 10px 0px;
     border:2px solid greenyellow; 
-    transition: all .15s ease-in-out;
+    transition: all .5s ease-in-out;
+    
     }
     input:hover,input:focus{
         border:2px solid red;
         box-shadow: 0px 0px 5px red;
+        margin-right: 0px;
         }
 .checkbox
 {  
@@ -96,5 +106,41 @@ input{
     {
         width:100%;
     }
+}
+.bg{
+position: absolute;
+width: 100vw;
+height: 100vh;
+background-image: linear-gradient(#22cde4ad,#fff);
+}
+.sun{
+    position: relative;
+    top:10px;
+    left:63%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 50px rgb(239, 253, 37);
+    background-color: rgb(239, 253, 37);
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.dark .bg{
+    background: rgba(22, 18, 18);
+}
+.dark .sun{
+    left:30%;
+    box-shadow: 0 0 rgb(255,255,255);
+    background-color: rgb(255,255,255);
+}
+.dark .sun::before{
+    content:'';
+    position:absolute;
+    top:-10px;
+    left:30%;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(22, 18, 18);
 }
 
